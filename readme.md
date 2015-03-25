@@ -1,5 +1,5 @@
-microscope-angular
-==================
+microscope-backbone-react
+=========================
 
 Backbone - React (CommonJS/ Browserify) starter kit
 
@@ -10,7 +10,7 @@ Requirements
 
 * node
 * npm
-* grunt-cli
+* gulp
 
 Node.js installation
 --------------------
