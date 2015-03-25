@@ -3,6 +3,7 @@
 var React = require('react');
 var WelcomeForm = require('./welcomeForm.jsx');
 
+// About page component
 var About = React.createClass({
 	render: function() {
     	return (

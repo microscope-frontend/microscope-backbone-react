@@ -32992,6 +32992,7 @@ module.exports = require('./lib/React');
 var React = require('react');
 var WelcomeForm = require('./welcomeForm.jsx');
 
+// About page component
 var About = React.createClass({displayName: "About",
 	render: function() {
     	return (
@@ -33010,12 +33011,23 @@ module.exports = About;
 
 var React = require('react');
 
+// Home page component
 var Home = React.createClass({displayName: "Home",
 	render: function() {
     	return (
-    		React.createElement("div", null, 
-    			React.createElement("h1", null, "Home")
-    		)
+			React.createElement("div", {className: "jumbotron text-center"}, 
+				React.createElement("div", {className: "container"}, 
+					React.createElement("img", {src: "/images/microscope.png"}), 
+					React.createElement("p", {className: "lead"}, 
+						"React + Backbone (CommonJS/ browserify) starter kit"
+					), 
+					React.createElement("p", null, 
+						React.createElement("a", {href: "https://github.com/bhtz/microscope-backbone-react", className: "btn btn-danger btn-lg"}, 
+							"Show Github"
+						)
+					)
+				)
+			)
     	);
   	}
 });
@@ -33027,6 +33039,7 @@ module.exports = Home;
 
 var React = require('react');
 
+// Welcome sample form component
 var WelcomeForm = React.createClass({displayName: "WelcomeForm",
 
 	handleSubmit: function (event) {
@@ -33063,21 +33076,19 @@ var React     = require('react');
 var Home      = require('./components/home.jsx');
 var About     = require('./components/about.jsx');
 
-/**
- * application router
- */
+// application router
 var Router = Backbone.Router.extend({
 
 	routes: {
-		""      : "index",
-		"about" : "about"
+		""        : "index",
+		"welcome" : "welcome"
 	},
 
 	index: function () {
 		React.render(React.createElement(Home, null), document.getElementById('main'));
 	},
 
-	about: function () {
+	welcome: function () {
 		React.render(React.createElement(About, null), document.getElementById('main'));
 	}
 });

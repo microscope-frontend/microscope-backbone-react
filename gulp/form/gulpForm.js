@@ -14,7 +14,8 @@ var GulpForm = Form.extend({
                 'serve',
                 'build',
                 'release',
-                'test'
+                'test',
+                'docs'
             ]
         }];
 

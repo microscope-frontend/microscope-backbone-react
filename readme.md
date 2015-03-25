@@ -88,5 +88,6 @@ Commands
 Roadmap
 =======
 
+* annoted code documentation with jsx
 * fix livereload
 * sourcemap

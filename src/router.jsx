@@ -5,21 +5,19 @@ var React     = require('react');
 var Home      = require('./components/home.jsx');
 var About     = require('./components/about.jsx');
 
-/**
- * application router
- */
+// application router
 var Router = Backbone.Router.extend({
 
 	routes: {
-		""      : "index",
-		"about" : "about"
+		""        : "index",
+		"welcome" : "welcome"
 	},
 
 	index: function () {
 		React.render(<Home />, document.getElementById('main'));
 	},
 
-	about: function () {
+	welcome: function () {
 		React.render(<About />, document.getElementById('main'));
 	}
 });

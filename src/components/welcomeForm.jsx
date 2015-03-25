@@ -2,6 +2,7 @@
 
 var React = require('react');
 
+// Welcome sample form component
 var WelcomeForm = React.createClass({
 
 	handleSubmit: function (event) {
