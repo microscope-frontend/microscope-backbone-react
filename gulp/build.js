@@ -5,7 +5,6 @@ var browserify  = require('browserify');
 var source      = require('vinyl-source-stream');
 var uglify      = require('gulp-uglify');
 var buffer      = require('vinyl-buffer');
-var clean       = require('gulp-clean');
 var runSequence = require('run-sequence');
 
 // build project

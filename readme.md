@@ -46,11 +46,47 @@ Installation
 Commands
 --------
 
-TODO
+#### default:
+
+	gulp
+
+* open gulp form powered by [microscope-console](https://github.com/microscopejs/microscope-console).
+
+#### serve:
+
+	gulp serve
+	
+* clean build directory.
+* copy assets in build directory.
+* compile scripts source files to bundle.
+* run local server with generated 'build/' directory as root.
+* Watch for changes in source files (scripts & assets).
+
+#### build:
+
+	gulp build
+	
+* clean build directory.
+* copy assets in build directory.
+* compile scripts source files to bundle.
+
+#### release:
+
+	gulp release
+	
+* clean build directory.
+* copy assets in build directory.
+* compile scripts source files to bundle.
+* uglify & minify bundle.
+
+#### test:
+
+	gulp test
+	
+* validate source code (jsHint).
 
 Roadmap
 =======
 
 * fix livereload
 * sourcemap
-* watcher
