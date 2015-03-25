@@ -1,4 +1,5 @@
 var gulp        = require('gulp');
+var del         = require('del');
 var reactify    = require('reactify');
 var browserify  = require('browserify');
 var source      = require('vinyl-source-stream');
@@ -9,12 +10,12 @@ var runSequence = require('run-sequence');
 
 // build project
 gulp.task('build', function (cb) {
-    runSequence('assets', 'browserify');
+    runSequence('clean', 'assets', 'browserify');
 });
 
 // build project in release mode
 gulp.task('release', function (cb) {
-    runSequence('assets', 'browserify:release');
+    runSequence('clean', 'assets', 'browserify:release');
 });
 
 // build src
@@ -43,20 +44,20 @@ gulp.task('browserify:release', function(cb){
     cb();
 });
 
+// watch files and run appropriate tasks
+gulp.task('watch', function () {
+    gulp.watch(['./assets/**'], ['assets']);
+    gulp.watch(['./src/**'], ['browserify']);
+});
+
 // assets tasks
-gulp.task('assets', ['clean'], function(cb){
-    
+gulp.task('assets', function(cb){
     return gulp.src('./assets/**')
         .pipe(gulp.dest('./build'));
-
     cb();
 });
 
 // clean build folder task
 gulp.task('clean', function(cb){
-    
-    return gulp.src('./build/**', {read: false})
-        .pipe(clean());
-
-    cb();
+    del(['./build/'], {force: true}, cb);
 });
