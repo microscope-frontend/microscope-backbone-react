@@ -5,7 +5,7 @@ Backbone - React (CommonJS/ Browserify) starter kit
 
 [![Build Status](https://travis-ci.org/bhtz/microscope-backbone-react.svg?branch=master)](https://travis-ci.org/bhtz/microscope-backbone-react)
 
-![microscopejs](http://microscopejs.com/images/mcsp_bg.png)
+![microscopejs](https://avatars0.githubusercontent.com/u/13710913?v=3&s=200)
 
 Requirements
 ------------
